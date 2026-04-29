@@ -9,3 +9,5 @@ class Persona:
 
     def get_info(self):
         return {"nombre": self._nombre, "email": self._email}
+    
+    # aqi estoy utilizando un constructor  que es mi constructor padre y que le dara la herencia a mis otras dos clases que se llamaran usuario.py y reciclador.py
