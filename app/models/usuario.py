@@ -5,7 +5,7 @@ class Usuario(Persona):
         super().__init__(nombre, email, telefono)
         self.direccion = direccion
         self.puntos = 0
-
+# Hoy estoy haciendo un comentario en el  codigo para ensayar la modificacion
     def acumular_puntos(self, cantidad):
         self.puntos += cantidad
 
