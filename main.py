@@ -1,10 +1,11 @@
 from fastapi import FastAPI
-from config.database import engine, Base
+from app.controllers import usuarios, recicladores
 
-Base.metadata.create_all(bind=engine)
+application = FastAPI(title='Reciclaje Pereira API')
 
-app = FastAPI(title="Reciclaje Pereira API")
+application.include_router(usuarios.router)
+application.include_router(recicladores.router)
 
-@app.get("/")
+@application.get('/')
 def root():
-    return {"mensaje": "Bienvenido a la API de Reciclaje Pereira"}
+    return {'mensaje': 'Bienvenido a la API de Reciclaje Pereira'}
