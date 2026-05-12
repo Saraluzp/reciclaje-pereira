@@ -7,10 +7,17 @@ async def buscar_direccion(query: str):
         async with httpx.AsyncClient() as client:
             response = await client.get(
                 f"{BASE_URL}/search",
-                params={"q": query, "format": "json", "limit": 5},
+                params={
+                    "q": query + ", Pereira, Colombia",
+                    "format": "json",
+                    "limit": 5
+                },
                 headers={"User-Agent": "ReciclajePereira/1.0"}
             )
             response.raise_for_status()
-            return response.json()
+            resultados = response.json()
+            if not resultados:
+                return {"mensaje": "No se encontró la dirección"}
+            return resultados
     except httpx.HTTPError as e:
         raise Exception(f"Error al consultar la API: {e}")
