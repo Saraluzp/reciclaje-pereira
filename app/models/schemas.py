@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 from typing import Optional
@@ -83,12 +84,24 @@ class RecicladorActualizar(BaseModel):
     disponible: Optional[bool] = None
 <<<<<<< HEAD
 
+=======
+from pydantic import BaseModel
+from typing import Optional
+
+
+from datetime import datetime
+ 
+>>>>>>> origin/feature/jacky-api-puntos
 # Esquemas de Solicitud
 class SolicitudCrear(BaseModel):
     usuario_id: int
     direccion: str
     descripcion: Optional[str] = None
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/feature/jacky-api-puntos
 class SolicitudRespuesta(BaseModel):
     id: int
     usuario_id: int
@@ -97,6 +110,7 @@ class SolicitudRespuesta(BaseModel):
     descripcion: Optional[str] = None
     estado: str
     fecha_creacion: datetime
+<<<<<<< HEAD
 
     class Config:
         from_attributes = True
@@ -106,3 +120,11 @@ class SolicitudActualizarEstado(BaseModel):
     reciclador_id: Optional[int] = None
 =======
 >>>>>>> origin/feature/lina-crud-usuarios
+=======
+    class Config:
+        from_attributes = True
+ 
+class SolicitudActualizarEstado(BaseModel):
+    estado: str
+    reciclador_id: Optional[int] = None
+>>>>>>> origin/feature/jacky-api-puntos

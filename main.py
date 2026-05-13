@@ -1,6 +1,9 @@
 from fastapi import FastAPI
 from config.database import engine, Base
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/feature/jacky-api-puntos
 from app.models import usuario_db, reciclador_db, solicitud_db
 from app.controllers import (
     usuario_controller,
@@ -8,6 +11,7 @@ from app.controllers import (
     solicitud_controller,
     geo_controller
 )
+<<<<<<< HEAD
 
 Base.metadata.create_all(bind=engine)
 
@@ -17,10 +21,18 @@ app = FastAPI(
     version="1.0.0"
 )
 
+=======
+ 
+Base.metadata.create_all(bind=engine)
+ 
+app = FastAPI(title='Reciclaje Pereira API')
+ 
+>>>>>>> origin/feature/jacky-api-puntos
 app.include_router(usuario_controller.router)
 app.include_router(reciclador_controller.router)
 app.include_router(solicitud_controller.router)
 app.include_router(geo_controller.router)
+<<<<<<< HEAD
 
 @app.get("/", tags=["Inicio"])
 def root():
@@ -59,3 +71,9 @@ app.include_router(reciclador_controller.router)
 def root():
     return {'mensaje': 'Bienvenido a la API de Reciclaje Pereira'}
 >>>>>>> origin/feature/lina-crud-usuarios
+=======
+ 
+@app.get('/')
+def root():
+    return {'mensaje': 'Bienvenido a la API de Reciclaje Pereira'}
+>>>>>>> origin/feature/jacky-api-puntos
