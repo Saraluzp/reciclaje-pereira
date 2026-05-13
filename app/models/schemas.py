@@ -1,15 +1,25 @@
+<<<<<<< HEAD
 from pydantic import BaseModel, EmailStr
 from typing import Optional
 from typing import Optional
 from datetime import datetime
 
+=======
+from pydantic import BaseModel
+from typing import Optional
+ 
+>>>>>>> origin/feature/lina-crud-usuarios
 # Esquemas de Usuario
 class UsuarioCrear(BaseModel):
     nombre: str
     email: str
     telefono: str
     direccion: str
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/feature/lina-crud-usuarios
 class UsuarioRespuesta(BaseModel):
     id: int
     nombre: str
@@ -17,23 +27,37 @@ class UsuarioRespuesta(BaseModel):
     telefono: str
     direccion: str
     puntos: int
+<<<<<<< HEAD
 
     class Config:
         from_attributes = True
 
+=======
+    class Config:
+        from_attributes = True
+ 
+>>>>>>> origin/feature/lina-crud-usuarios
 class UsuarioActualizar(BaseModel):
     nombre: Optional[str] = None
     email: Optional[str] = None
     telefono: Optional[str] = None
     direccion: Optional[str] = None
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/feature/lina-crud-usuarios
 # Esquemas de Reciclador
 class RecicladorCrear(BaseModel):
     nombre: str
     email: str
     telefono: str
     zona: str
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/feature/lina-crud-usuarios
 class RecicladorRespuesta(BaseModel):
     id: int
     nombre: str
@@ -41,16 +65,23 @@ class RecicladorRespuesta(BaseModel):
     telefono: str
     zona: str
     disponible: bool
+<<<<<<< HEAD
 
     class Config:
         from_attributes = True
 
+=======
+    class Config:
+        from_attributes = True
+ 
+>>>>>>> origin/feature/lina-crud-usuarios
 class RecicladorActualizar(BaseModel):
     nombre: Optional[str] = None
     email: Optional[str] = None
     telefono: Optional[str] = None
     zona: Optional[str] = None
     disponible: Optional[bool] = None
+<<<<<<< HEAD
 
 # Esquemas de Solicitud
 class SolicitudCrear(BaseModel):
@@ -73,3 +104,5 @@ class SolicitudRespuesta(BaseModel):
 class SolicitudActualizarEstado(BaseModel):
     estado: str
     reciclador_id: Optional[int] = None
+=======
+>>>>>>> origin/feature/lina-crud-usuarios
