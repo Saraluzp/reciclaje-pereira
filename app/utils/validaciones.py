@@ -1,5 +1,4 @@
-# package
-# Validaciones de entrada de datos - Lina
+# Validaciones de entrada de datos
 
 def validar_telefono(telefono: str) -> bool:
     """Verifica que el teléfono tenga exactamente 10 dígitos."""

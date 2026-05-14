@@ -4,7 +4,7 @@ class Persona:
         self._email = email
         self._telefono = telefono
 
-    def ___str__(self):
+    def __str__(self):
         return f"{self._nombre} ({self._email})"
 
     def get_info(self):
